@@ -113,12 +113,17 @@ __Tools and Commands__:
 - `fail2ban` monitors log files for too many failed login attempts and bans offending IPs.
 - `rkhunter` and `chkrootkit` scan for rootkits.
 - `unattended-upgrades` or yum-cron for automatic security updates.
+- `tcpdump -i any` can capture and analyze network packets, allowing you to see the type of traffic on your network.
+
+![](./assets/tcpdump.png)
 
 ## 12. File System Integrity
 Monitoring file system integrity ensures critical files have not been altered, an important part of maintaining system security.
 
 __Tools__:
 - `AIDE` (Advanced Intrusion Detection Environment) or `Tripwire` for file integrity checks.
+
+![](./assets/tripwire.png)
 
 ## 13. Backup Systems
 Regularly monitoring backup systems ensures that data can be recovered in case of corruption or loss.
