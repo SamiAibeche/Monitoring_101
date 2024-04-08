@@ -76,6 +76,8 @@ Commands:
 - `who` shows who is logged into the system.
 - `auditd` and related tools (`ausearch`, `auditctl`) for advanced auditing of user actions.
 
+![](./assets/who_last.png)
+
 ## 8. Process Monitoring
 Keeping an eye on running processes is essential for ensuring that services are running as expected.
 
@@ -84,6 +86,8 @@ Commands:
 - `pstree` displays a tree of processes.
 - `top`, `htop` for dynamic real-time process monitoring.
 
+![](./assets/ps.png)
+
 ## 9. Swap Usage
 Monitoring swap usage is essential, especially on systems with limited RAM. Excessive swap usage can significantly degrade performance.
 
@@ -91,12 +95,16 @@ Commands:
 - `swapon -s` provides swap usage summary.
 - `free -m` shows both RAM and swap usage.
 
+![](./assets/freem.png)
+
 ## 10. Hardware Health
 Monitoring the health of physical hardware can prevent failures. Tools like smartctl for hard drives and lm_sensors for temperature sensors are invaluable.
 
 __Tools__ :
 - `smartctl -a /dev/sda` checks the health of a hard disk.
 - `sensors` displays temperatures, voltages, and fan speeds.
+
+![](./assets/sensors.png)
 
 ## 11. System Security
 Ensuring the system is secure involves monitoring for unauthorized access attempts, checking for rootkits, and ensuring patches are applied.
