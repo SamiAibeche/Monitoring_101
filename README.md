@@ -57,12 +57,16 @@ Important Log Files:
 - `/var/log/dmesg` for system boot messages.
 - `journalctl` for querying and displaying messages from the systemd journal.
 
+![](./assets/journalctl.png)
+
 ## 6. System Uptime and Load
 System uptime indicates how long the system has been running, which can be useful for tracking the stability and reliability of the system.
 
 Commands:
 - `uptime` shows how long the system has been running along with load averages.
 - `w` displays who is logged on and their activity, along with load averages.
+
+![](./assets/uptime_w.png)
 
 ## 7. User Activity
 Monitoring user activity is important for security and auditing purposes.
