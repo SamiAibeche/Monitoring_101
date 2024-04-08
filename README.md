@@ -128,9 +128,43 @@ __Tools__:
 ## 13. Backup Systems
 Regularly monitoring backup systems ensures that data can be recovered in case of corruption or loss.
 
+Below, an example designed to manually restore some files from a backup archive to a test directory. (GPT)
+```
+#!/bin/bash
+
+# Configuration
+BACKUP_ARCHIVE="/path/to/your/backup.tar.gz" # Path to your backup archive
+TEST_RESTORE_DIR="/path/to/test/restore" # Path to the directory where files will be restored
+ORIGINAL_FILES_DIR="/path/to/original/files" # Path to the original files (for checksum comparison)
+
+# Create test restore directory if it doesn't exist
+mkdir -p "$TEST_RESTORE_DIR"
+
+# Extract files from the backup archive to the test directory
+tar -xzvf "$BACKUP_ARCHIVE" -C "$TEST_RESTORE_DIR"
+
+echo "Restoration of files to $TEST_RESTORE_DIR completed."
+
+echo "Starting integrity check..."
+for original_file in $(find "$ORIGINAL_FILES_DIR" -type f); do
+    # Compute checksums
+    original_checksum=$(sha256sum "$original_file" | cut -d ' ' -f 1)
+    restored_file="$TEST_RESTORE_DIR/$(basename "$original_file")"
+    restored_checksum=$(sha256sum "$restored_file" | cut -d ' ' -f 1)
+
+    # Compare checksums
+    if [ "$original_checksum" == "$restored_checksum" ]; then
+        echo "Checksum match for $(basename "$original_file")"
+    else
+        echo "Checksum MISMATCH for $(basename "$original_file")"
+    fi
+done
+echo "Integrity check completed."
+
+```
 __Considerations__:
-Verify backup completion.
-Test data restoration regularly.
+- Verify backup completion.
+- Test data restoration regularly.
 
 ## 14. Service Availability
 Monitoring the availability and responsiveness of services is crucial for maintaining application performance and uptime.
@@ -159,7 +193,9 @@ Databases are often the backbone of applications, making their performance monit
 __Tools and Metrics__:
 - Query execution times.
 - Connection counts.
-- `mysqltuner` for MySQL performance tuning.
+- `mysqltuner` or `mytop` for MySQL performance tuning.
+
+![](./assets/mytop.png)
 
 ## 18. Application Performance Monitoring (APM)
 APM tools provide insights into how applications perform and how transactions flow through the infrastructure.
@@ -181,3 +217,10 @@ For systems hosted in the cloud, monitoring provided by the cloud provider, as w
 __Tools and Services__:
 - AWS CloudWatch, Azure Monitor, and Google Cloud Operations suite for native cloud monitoring.
 - `Terraform` for infrastructure as code (IaC) to manage and monitor infrastructure changes.
+
+
+### Follow next steps below :
+
+Answer to common questions as _How can you check the uptime of a machine ?_, _How can you assess the network traffic ?_...
+
+[Click here](./QA.md)
