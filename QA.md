@@ -58,4 +58,4 @@ A tool that displays and logs bandwidth data and information.
 - `Wireshark (GUI)`
 A network protocol analyzer that lets you capture and interactively browse the traffic running on a computer network.
 
-[Click here to go see the Report](./Report.md)
+[Click here to have a look on the Report](./Report.md)
