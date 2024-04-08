@@ -33,6 +33,8 @@ Commands:
 - `iotop` monitors disk I/O by processes.
 - `lsblk` lists information about all available or the specified block devices.
 
+![](./assets/df.png)
+
 ## 4. Network Traffic
 Understanding network traffic and throughput is vital for maintaining network performance and security.
 
@@ -41,6 +43,9 @@ Commands:
 - `ss` is a utility to investigate sockets.
 - `iftop` and `nload` display bandwidth usage on an interface.
 - `tcpdump` for capturing and analyzing network packets.
+
+![](./assets/netstat.png)
+
 
 ## 5. Log Files
 Logs are crucial for understanding what's happening on a system, including system errors, security alerts, and operational information.
