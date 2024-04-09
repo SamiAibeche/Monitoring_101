@@ -171,7 +171,7 @@ ___Be Proactive___: It's all about staying one step ahead. Let's double down on 
 
 ___Keep Evolving___: Systems change, and so do the bad guys' tricks. That's why we should regularly revisit our monitoring game plan, tweaking it to stay current.
 
-___Knowledge is Power___: And finally, let's make sure our IT team is up to speed on the latest in monitoring savvy. The right training can make all the difference in catching and dealing with alerts effectively."
+___Knowledge is Power___: And finally, let's make sure our IT team is up to speed on the latest in monitoring savvy. The right training can make all the difference in catching and dealing with alerts effectively.
 
 
 <p align="center">
